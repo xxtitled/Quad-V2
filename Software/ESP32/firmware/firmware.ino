@@ -1,11 +1,4 @@
-/*
-* Yertle Quadruped Robot - Firmware for EPS32
-* 
-* Written by Jerome Graves
-* 2022
-* Jeromegraves.com    
-*/
-#include "yertle lib.h"
+#include "QV2_lib.h"
 #include <Wire.h>
 
 TaskHandle_t Task1;
