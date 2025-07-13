@@ -19,8 +19,8 @@ void setup() {
 
     _gait.setStepsPerSec(2);
     _graph[0] = new LegGraph(0, width / 2 +  50,  400); //<>//
-    _graph[1] = new LegGraph(1, width / 2 - 300,  400);
-    _graph[2] = new LegGraph(2, width / 2 - 300,  200);
+    _graph[2] = new LegGraph(2, width / 2 - 300,  400);
+    _graph[1] = new LegGraph(1, width / 2 - 300,  200);
     _graph[3] = new LegGraph(3, width / 2 +  50,  200);
     
     background(0);
