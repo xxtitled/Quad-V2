@@ -133,7 +133,9 @@ void loop() {
       Serial.println("R: ");
       break;
 
-    case 'a': case 'A':
+    //============= 보행 =============
+
+    case 'a': case 'A': // --> 낮은 보행
       setGroupA(90, 160, 120);  // F_L - B_R
       setGroupB(90, 150, 100);  // B_L
       setGroupC(90, 30, 80);    // F_R
@@ -141,7 +143,19 @@ void loop() {
       Serial.println("A: ");
       break;
 
-    case 's': case 'S': // --> 보행
+    case 'z': case 'Z': // --> 보행 --> 오 왼 당기고 펴기
+      setGroupA(90, 120, 110);  // F_L - B_R
+      setGroupB(90, 130, 125);  // B_L
+      setGroupC(90, 50, 55);    // F_R
+      setGroupD(90, 60, 65);    // B_R - F_L
+      delay(500);
+      setGroupC(90, 40, 70);    // F_R
+      setGroupB(90, 140, 110);  // B_L
+      Serial.println("A: ");
+      break;
+
+
+    case 's': case 'S': // --> 낮은 보행
       setGroupA(90, 150, 100);  // F_L
       setGroupB(90, 160, 120);  // B_L - F_R
       setGroupC(90, 20, 60);    // F_R - B_L
@@ -149,6 +163,47 @@ void loop() {
       Serial.println("S: ");
       break;
 
+    case 'x': case 'X': // --> 보행
+      setGroupA(90, 130, 125);  // F_L
+      setGroupB(90, 120, 110);  // B_L - F_R
+      setGroupC(90, 60, 70);    // F_R - B_L
+      setGroupD(90, 50, 55);    // B_R
+      delay(500);
+      setGroupA(90, 130, 115);  // F_L
+      setGroupD(90, 50, 65);    // B_R
+      Serial.println("S: ");
+      break;
+
+
+    case 'c': case 'C': // --> 보행 --> 오 왼 당기고 펴기
+      setGroupA(100, 120, 120);  // F_L - B_R
+      setGroupB(100, 130, 125);  // B_L
+      setGroupC(100, 50, 55);    // F_R
+      setGroupD(100, 60, 60);    // B_R - F_L
+      delay(500);
+      setGroupA(90, 120, 120);  // F_L
+      setGroupB(90, 130, 125);
+      setGroupC(90, 50, 55);    // F_R
+      setGroupD(90, 60, 60);  // B_L
+      Serial.println("A: ");
+      break;
+
+
+    case 'v': case 'V': // --> 보행
+      setGroupA(80, 130, 125);  // F_L
+      setGroupB(80, 120, 110);  // B_L - F_R
+      setGroupC(80, 60, 70);    // F_R - B_L
+      setGroupD(80, 50, 55);    // B_R
+      delay(500);
+      setGroupA(90, 130, 125);  // F_L
+      setGroupB(90, 120, 110);
+      setGroupC(90, 60, 70);    // F_R
+      setGroupD(90, 50, 55);  // B_L
+      Serial.println("S: ");
+      break;
+
+
+    //============= 보행 =============
     case 'd': case 'D': // --> 포복
       setGroupA(90, 170, 110);
       setGroupB(90, 170, 110);
