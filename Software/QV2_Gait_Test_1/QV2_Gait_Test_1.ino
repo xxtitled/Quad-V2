@@ -133,6 +133,78 @@ void loop() {
       Serial.println("R: ");
       break;
 
+    case 't': case 'T': // --> 제자리 Trot Gait
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(250);
+      setGroupA(90, 145, 95); //F_L 발 들기
+      setGroupD(90, 35, 85);  //B_R 발 들기
+      delay(250);
+      setGroupA(90, 140, 110); //F_L
+      setGroupD(90, 40, 65);  //B_R
+      delay(250);
+      setGroupB(90, 145, 95);  //F_R
+      setGroupC(90, 35, 85);  //B_L
+      delay(250);
+      setGroupB(90, 140, 110);  //F_R
+      setGroupC(90, 40, 70);  //B_L
+      Serial.println("T: ");
+      break;
+
+    case 'o': case 'O': // --> 전진 Trot Gait
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(250);
+      setGroupA(105, 150, 95); //F_L 발 들기
+      setGroupD(75, 30, 85);  //B_R 발 들기
+      delay(250);
+      setGroupA(90, 140, 110); //F_L
+      setGroupD(90, 40, 65);  //B_R
+      delay(250);
+      setGroupB(105, 150, 95);  //F_R 발 들기
+      setGroupC(75, 30, 85);  //B_L 발 들기
+      delay(250);
+      setGroupB(90, 140, 110);  //F_R
+      setGroupC(90, 40, 70);  //B_L
+      Serial.println("O: ");
+      break;
+
+    case 'y': case 'Y': // --> 제자리 발 구르기 길게
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 70); // 발 위치 맞추기
+      delay(250);
+      setGroupA(90, 145, 95); //F_L 발 들기
+      setGroupD(90, 35, 85);  //B_R 발 들기
+      delay(250);
+      setGroupA(90, 140, 110); //F_L
+      setGroupD(90, 40, 70);  //B_R
+      delay(250);
+      setGroupB(90, 145, 95);  //F_R
+      setGroupC(90, 35, 85);  //B_L
+      delay(250);
+      setGroupB(90, 140, 110);  //F_R
+      setGroupC(90, 40, 70);  //B_L -- 초기 상태
+      delay(250);
+      setGroupA(90, 145, 95); //F_L 발 들기
+      setGroupD(90, 35, 85);  //B_R 발 들기
+      delay(250);
+      setGroupA(90, 140, 110); //F_L
+      setGroupD(90, 40, 70);  //B_R
+      delay(250);
+      setGroupB(90, 145, 95);  //F_R
+      setGroupC(90, 35, 85);  //B_L
+      delay(250);
+      setGroupB(90, 140, 110);  //F_R
+      setGroupC(90, 40, 70);  //B_L
+      Serial.println("T: ");
+      break;
+
     //============= 보행 =============
 
     case 'a': case 'A': // --> 낮은 보행
@@ -174,6 +246,7 @@ void loop() {
       Serial.println("X: ");
       break;
 
+    //=========================================
 
     case 'c': case 'C': // --> 보행 --> 오 왼 당기고 펴기
       setGroupA(100, 120, 120);  // F_L - B_R
@@ -201,6 +274,7 @@ void loop() {
       setGroupD(90, 50, 55);  // B_L
       Serial.println("V: ");
       break;
+
 
 
     //==========================
@@ -250,19 +324,35 @@ void loop() {
       break;
 
     case 'k': case 'K': // --> 완전히 앉은 상태에서 Front +Z 방향으로 Roll 회전, Back -Z 방향으로 Roll 회전 --> 전방 & 후방 반대로 회전
-      setGroupA(160, 180, 90);
-      setGroupB(160, 180, 90);
-      setGroupC(20, 0, 90);  
-      setGroupD(20, 0, 90); 
+      setGroupA(150, 180, 90);
+      setGroupB(150, 180, 90);
+      setGroupC(30, 0, 90);  
+      setGroupD(30, 0, 90); 
       Serial.println("K: ");
       break;
 
     case 'l': case 'L': // --> 완전히 앉은 상태에서 Front -Z 방향으로 Roll 회전, Back +Z 방향으로 Roll 회전 --> 전방 & 후방 반대로 회전
-      setGroupA(40, 180, 90);
-      setGroupB(40, 180, 90);
-      setGroupC(140, 0, 90);  
-      setGroupD(140, 0, 90); 
+      setGroupA(30, 180, 90);
+      setGroupB(30, 180, 90);
+      setGroupC(150, 0, 90);  
+      setGroupD(150, 0, 90); 
       Serial.println("L: ");
+      break;
+
+  case 'u': case 'U': // --> 일어난 상태 Roll  좌 움직임
+      setGroupA(70, 140, 110);
+      setGroupB(110, 140, 110);  
+      setGroupC(70, 40, 70);
+      setGroupD(110, 40, 70);      
+      Serial.println("U: ");
+      break;
+
+   case 'i': case 'I': // --> 일어난 상태 Roll 우 움직임
+      setGroupA(110, 140, 110);
+      setGroupB(70, 140, 110);  
+      setGroupC(110, 40, 70);
+      setGroupD(70, 40, 70);      
+      Serial.println("I: ");
       break;
 
 
