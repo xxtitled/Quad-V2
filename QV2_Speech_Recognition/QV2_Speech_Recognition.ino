@@ -107,7 +107,7 @@ void standup() { // 일어나기
   Serial.println("일어나기");
 }
 
-void trot() { // 제자리 Trot Gait
+void trot() { // 제자리 Trot Gait --> 준비
   setGroupA(90, 140, 110);
   setGroupB(90, 140, 110);
   setGroupC(90, 40, 70);
@@ -213,37 +213,37 @@ void sitdown() { // 앉기
   Serial.println("앉기");
 }
 
-void roll() { // Roll
-  setGroupA(90, 140, 110); // --> 일어나기 상태
-  setGroupB(90, 140, 110);  
-  setGroupC(90, 40, 70);
-  setGroupD(90, 40, 70); 
-  delay(250);
+void leftroll() { // Left Roll
   setGroupA(70, 140, 110); // --> Roll 좌 움직임
   setGroupB(110, 140, 110);  
   setGroupC(70, 40, 70);
   setGroupD(110, 40, 70);      
-  delay(200);
+  Serial.println("left Roll");
+}
+
+void rightroll() { // Right Roll
   setGroupA(110, 140, 110); // --> Roll 우 움직임
   setGroupB(70, 140, 110);  
   setGroupC(110, 40, 70);
-  setGroupD(70, 40, 70);
-  Serial.println("Roll");
+  setGroupD(70, 40, 70); 
+  Serial.println("Right Roll");
 }
 
-void pitch() { // Pitch 
+void frontpitch() { // Front Pitch 
   setGroupA(90, 140, 110);  // FL / --> 앞으로 숙이기
   setGroupB(90, 120, 110);  // BL
   setGroupC(90, 40, 70);  // FR
   setGroupD(90, 60, 70);  // BR
-  delay(200);
+  Serial.println("Front Pitch");
+}
+
+void backpitch() { // Back Pitch 
   setGroupA(90, 120, 110);  // FL / --> 뒤로 숙이기
   setGroupB(90, 140, 110);  // BL
   setGroupC(90, 60, 70);  // FR
   setGroupD(90, 40, 70);  // BR
-  Serial.println("Pitch");
+  Serial.println("Back Pitch");
 }
-
 
 void loop() {
   if (SerialBT.available()) {
@@ -263,16 +263,22 @@ void loop() {
     else if (cmd.equalsIgnoreCase("down") || cmd.equals("앉아") || cmd.equals("아래")) {
       sitdown();
     }
-    else if (cmd.equalsIgnoreCase("roll") || cmd.equals("왼쪽") || cmd.equals("오른쪽")) {
-      roll();
+    else if (cmd.equalsIgnoreCase("leftroll") || cmd.equals("왼쪽")) {
+      leftroll();
     }
-    else if (cmd.equalsIgnoreCase("pitch") || cmd.equals("앞") || cmd.equals("뒤")) {
-      pitch();
+    else if (cmd.equalsIgnoreCase("rightroll") || cmd.equals("오른쪽")) {
+      rightroll();
     }
-    
+    else if (cmd.equalsIgnoreCase("frontpitch") || cmd.equals("앞쪽")) {
+      frontpitch();
+    }
+    else if (cmd.equalsIgnoreCase("backpitch") || cmd.equals("뒤쪽")) {
+      backpitch();
+    }
+
     else {
       Serial.println("Unknown command");
     }
   }
-  delay(20);
+  delay(20); // 과부화 방지
 }
