@@ -288,6 +288,244 @@ void loop() {
       Serial.println("T: ");
       break;
 
+    case '0': // --> 전진 Trot Gait
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(200);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(200);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(200);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(200);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(200);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(200);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(250); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(200);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(200);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(200);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(200);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(200);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(200);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(250); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(200);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(200);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(200);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(200);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(200);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(200);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(250); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(200);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(200);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(200);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(200);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(200);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(200);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(250); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(200);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(200);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(200);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(200);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(200);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(200);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      Serial.println("0: 전진");
+      break;
+
+    case '9': // --> 전진 Trot Gait 더 빠르게
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(150);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(150);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(150);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(150);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(150);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(150);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(150); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(150);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(150);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(150);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(150);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(150);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(150);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(150); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(150);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(150);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(150);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(150);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(150);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(150);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(150); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(150);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(150);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(150);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(150);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(150);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(150);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      delay(150); // ===== 초기화 =====
+      setGroupA(90, 140, 110);
+      setGroupB(90, 140, 110);
+      setGroupC(90, 40, 70);
+      setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+      delay(150);
+      setGroupA(90, 150, 95); //F_L 발 들기
+      setGroupD(90, 30, 85);  //B_R 발 들기
+      delay(150);
+      setGroupA(90, 130, 90); //F_L 발 밀기
+      setGroupD(90, 50, 90);  //B_R 발 밀기
+      delay(150);
+      setGroupA(90, 140, 110); //F_L 발 원상태
+      setGroupD(90, 40, 65);  //B_R 발 원상태
+      delay(150);
+      setGroupB(90, 150, 95);  //F_R 발 들기
+      setGroupC(90, 30, 85);  //B_L 발 들기
+      delay(150);
+      setGroupB(90, 130, 90);  //F_R 발 밀기
+      setGroupC(90, 50, 90);  //B_L 발 밀기
+      delay(150);
+      setGroupB(90, 140, 110);  //F_R 원상태
+      setGroupC(90, 40, 70);  //B_L 원상태
+      Serial.println("9: 전진");
+      break;
+
+
+
     //============= 보행 =============
 
     case 'a': case 'A': // --> 낮은 보행
