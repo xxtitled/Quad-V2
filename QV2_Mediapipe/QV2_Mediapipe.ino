@@ -172,7 +172,7 @@ void loop() {
         setGroupB(90, 140, 110);  // BL
         setGroupC(90, 60, 70);  // FR
         setGroupD(90, 40, 70);  // BR
-        Serial.println("2: Pitch 회전");
+        Serial.println("3: Pitch 회전");
         break;
 
       case '4': // 편 손가락 수: 4 --> Roll 회전
