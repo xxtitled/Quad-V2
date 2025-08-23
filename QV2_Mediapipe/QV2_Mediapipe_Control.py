@@ -4,7 +4,7 @@ import serial
 import time
 
 # ─── 1) ESP32 시리얼 초기화 ────────────────────────────────
-esp32 = serial.Serial('COM6', 115200, timeout=1) # 연결 시 포트 확인 필수 
+esp32 = serial.Serial('COM5', 115200, timeout=1) # 연결 시 포트 확인 필수 
 time.sleep(2)  # 연결 안정화
 
 # ─── 2) MediaPipe Hands 초기화 ────────────────────────────
@@ -87,4 +87,5 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
 esp32.close()
