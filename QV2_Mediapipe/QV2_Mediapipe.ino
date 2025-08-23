@@ -131,6 +131,29 @@ void loop() {
         delay(150);
         setGroupB(90, 140, 110);  //F_R 원상태
         setGroupC(90, 40, 70);  //B_L 원상태
+        delay(150); // ======== 초기화 ========
+        setGroupA(90, 140, 110);
+        setGroupB(90, 140, 110);
+        setGroupC(90, 40, 70);
+        setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
+        delay(150);
+        setGroupA(90, 150, 95); //F_L 발 들기
+        setGroupD(90, 30, 85);  //B_R 발 들기
+        delay(150);
+        setGroupA(90, 130, 90); //F_L 발 밀기
+        setGroupD(90, 50, 90);  //B_R 발 밀기
+        delay(150);
+        setGroupA(90, 140, 110); //F_L 발 원상태
+        setGroupD(90, 40, 65);  //B_R 발 원상태
+        delay(150);
+        setGroupB(90, 150, 95);  //F_R 발 들기
+        setGroupC(90, 30, 85);  //B_L 발 들기
+        delay(150);
+        setGroupB(90, 130, 90);  //F_R 발 밀기
+        setGroupC(90, 50, 90);  //B_L 발 밀기
+        delay(150);
+        setGroupB(90, 140, 110);  //F_R 원상태
+        setGroupC(90, 40, 70);  //B_L 원상태
         Serial.println("2: 전진");
         break;
 
@@ -139,12 +162,12 @@ void loop() {
         setGroupB(90, 120, 110);  // BL
         setGroupC(90, 40, 70);  // FR
         setGroupD(90, 60, 70);  // BR
-        delay(150); // 초기화
+        delay(500); // 초기화
         setGroupA(90, 140, 110);
         setGroupB(90, 140, 110);  
         setGroupC(90, 40, 70);
         setGroupD(90, 40, 70);
-        delay(150); // 초기화
+        delay(500); // 초기화
         setGroupA(90, 120, 110);  // FL / --> 뒤로 숙이기
         setGroupB(90, 140, 110);  // BL
         setGroupC(90, 60, 70);  // FR
@@ -157,12 +180,12 @@ void loop() {
         setGroupB(110, 140, 110);  
         setGroupC(70, 40, 70);
         setGroupD(110, 40, 70);      
-        delay(150); // 초기화
+        delay(500); // 초기화
         setGroupA(90, 140, 110); // --> 일어나기 상태
         setGroupB(90, 140, 110);  
         setGroupC(90, 40, 70);
         setGroupD(90, 40, 70); 
-        delay(150); // 초기화
+        delay(500); // 초기화
         setGroupA(110, 140, 110); // --> Roll 우 움직임
         setGroupB(70, 140, 110);  
         setGroupC(110, 40, 70);
