@@ -64,8 +64,8 @@ void setGroupB(float hip, float knee, float ankle) {    // Right
   setAngle(ANKLE_B[0], ankle);
 }
 
-// ============= BACk ============= 
-void setGroupC(float hip, float knee, float ankle) {    // Legt
+// ============= BACK ============= 
+void setGroupC(float hip, float knee, float ankle) {    // Left
   setAngle(HIP_C[0], hip);
   setAngle(KNEE_C[0], knee);
   setAngle(ANKLE_C[0], ankle);
@@ -108,115 +108,61 @@ void loop() {
         Serial.println("1: 일어나기");
         break;
 
-      case '2': // 편 손가락 수: 2 --> 제자리 Trot Gait 3 
+      case '2': // 편 손가락 수: 2 -->  전진 Trot Gait 
         setGroupA(90, 140, 110);
         setGroupB(90, 140, 110);
         setGroupC(90, 40, 70);
         setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
-        delay(200);
-        setGroupA(105, 150, 95); //F_L 발 들기
-        setGroupD(75, 30, 85);  //B_R 발 들기
-        delay(200);
-        setGroupA(95, 150, 120); //F_L 발 밀기
-        setGroupD(85, 30, 60);  //B_R 발 밀기
-        delay(200);
-        setGroupA(90, 140, 110); //F_L 발 원상태
-        setGroupD(90, 40, 65);  //B_R 발 원상태
-        delay(200);
-        setGroupB(105, 150, 95);  //F_R 발 들기
-        setGroupC(75, 30, 85);  //B_L 발 들기
-        delay(200);
-        setGroupB(95, 150, 120);  //F_R 발 밀기
-        setGroupC(85, 30, 60);  //B_L 발 밀기
-        delay(200);
-        setGroupB(90, 140, 110);  //F_R 원상태
-        setGroupC(90, 40, 70);  //B_L 원상태
-        delay(250); // ===== 초기화 =====
-        setGroupA(90, 140, 110);
-        setGroupB(90, 140, 110);
-        setGroupC(90, 40, 70);
-        setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
-        delay(200);
-        setGroupA(105, 150, 95); //F_L 발 들기
-        setGroupD(75, 30, 85);  //B_R 발 들기
-        delay(200);
-        setGroupA(95, 150, 120); //F_L 발 밀기
-        setGroupD(85, 30, 60);  //B_R 발 밀기
-        delay(200);
-        setGroupA(90, 140, 110); //F_L 발 원상태
-        setGroupD(90, 40, 65);  //B_R 발 원상태
-        delay(200);
-        setGroupB(105, 150, 95);  //F_R 발 들기
-        setGroupC(75, 30, 85);  //B_L 발 들기
-        delay(200);
-        setGroupB(95, 150, 120);  //F_R 발 밀기
-        setGroupC(85, 30, 60);  //B_L 발 밀기
-        delay(200);
-        setGroupB(90, 140, 110);  //F_R 원상태
-        setGroupC(90, 40, 70);  //B_L 원상태
-        Serial.println("2: 제자리 Trot Gait");
-        break;
-
-      case '3': // 편 손가락 수: 3 --> 전진 Trot Gait 2 (Z 축으로만 발 들기)
-        setGroupA(90, 140, 110);
-        setGroupB(90, 140, 110);
-        setGroupC(90, 40, 70);
-        setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
-        delay(200);
+        delay(150);
         setGroupA(90, 150, 95); //F_L 발 들기
         setGroupD(90, 30, 85);  //B_R 발 들기
-        delay(200);
+        delay(150);
         setGroupA(90, 130, 90); //F_L 발 밀기
         setGroupD(90, 50, 90);  //B_R 발 밀기
-        delay(200);
+        delay(150);
         setGroupA(90, 140, 110); //F_L 발 원상태
         setGroupD(90, 40, 65);  //B_R 발 원상태
-        delay(200);
+        delay(150);
         setGroupB(90, 150, 95);  //F_R 발 들기
         setGroupC(90, 30, 85);  //B_L 발 들기
-        delay(200);
+        delay(150);
         setGroupB(90, 130, 90);  //F_R 발 밀기
         setGroupC(90, 50, 90);  //B_L 발 밀기
-        delay(200);
+        delay(150);
         setGroupB(90, 140, 110);  //F_R 원상태
         setGroupC(90, 40, 70);  //B_L 원상태
-        delay(250); // ===== 초기화 =====
-        setGroupA(90, 140, 110);
-        setGroupB(90, 140, 110);
-        setGroupC(90, 40, 70);
-        setGroupD(90, 40, 65); // 발 위치 맞추기 --> 서브 서보 수정 전
-        delay(200);
-        setGroupA(90, 150, 95); //F_L 발 들기
-        setGroupD(90, 30, 85);  //B_R 발 들기
-        delay(200);
-        setGroupA(90, 130, 90); //F_L 발 밀기
-        setGroupD(90, 50, 90);  //B_R 발 밀기
-        delay(200);
-        setGroupA(90, 140, 110); //F_L 발 원상태
-        setGroupD(90, 40, 65);  //B_R 발 원상태
-        delay(200);
-        setGroupB(90, 150, 95);  //F_R 발 들기
-        setGroupC(90, 30, 85);  //B_L 발 들기
-        delay(200);
-        setGroupB(90, 130, 90);  //F_R 발 밀기
-        setGroupC(90, 50, 90);  //B_L 발 밀기
-        delay(200);
-        setGroupB(90, 140, 110);  //F_R 원상태
-        setGroupC(90, 40, 70);  //B_L 원상태
-        Serial.println("3: 전진 Trot Gait");
+        Serial.println("2: 전진");
         break;
 
-      case '4': // 편 손가락 수: 4 --> Roll 움직임
-        setGroupA(90, 140, 110); // --> 일어나기 상태
+      case '3': // 편 손가락 수: 3 --> Pitch 회전
+        setGroupA(90, 140, 110);  // FL / --> 앞으로 숙이기
+        setGroupB(90, 120, 110);  // BL
+        setGroupC(90, 40, 70);  // FR
+        setGroupD(90, 60, 70);  // BR
+        delay(150); // 초기화
+        setGroupA(90, 140, 110);
         setGroupB(90, 140, 110);  
         setGroupC(90, 40, 70);
-        setGroupD(90, 40, 70); 
-        delay(250);
+        setGroupD(90, 40, 70);
+        delay(150); // 초기화
+        setGroupA(90, 120, 110);  // FL / --> 뒤로 숙이기
+        setGroupB(90, 140, 110);  // BL
+        setGroupC(90, 60, 70);  // FR
+        setGroupD(90, 40, 70);  // BR
+        Serial.println("2: Pitch 회전");
+        break;
+
+      case '4': // 편 손가락 수: 4 --> Roll 회전
         setGroupA(70, 140, 110); // --> Roll 좌 움직임
         setGroupB(110, 140, 110);  
         setGroupC(70, 40, 70);
         setGroupD(110, 40, 70);      
-        delay(200);
+        delay(150); // 초기화
+        setGroupA(90, 140, 110); // --> 일어나기 상태
+        setGroupB(90, 140, 110);  
+        setGroupC(90, 40, 70);
+        setGroupD(90, 40, 70); 
+        delay(150); // 초기화
         setGroupA(110, 140, 110); // --> Roll 우 움직임
         setGroupB(70, 140, 110);  
         setGroupC(110, 40, 70);
