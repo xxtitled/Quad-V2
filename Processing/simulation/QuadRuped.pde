@@ -220,13 +220,13 @@ boolean IS_RIGHT_LEG(int leg) {
 class QuadRuped {
     Leg       _legs[];
     Vector    _vMov;
-    Rotator   _rRot;    // x-> pitch, y->roll, z->yaw
+    Rotator   _rRot;    
     Gait      _gait;
     boolean   _isWalk;
     int       _debugLegMask = 0x1;
     
     Vector    _vMovOld;
-    Rotator   _rRotOld;    // x-> pitch, y->roll, z->yaw    
+    Rotator   _rRotOld;      
 
     QuadRuped(float bodyWidth, float bodyHeight, float coxaLen, float coxaOffsetZ, float femurLen, float tibiaLen) {
         _legs       = new Leg[4];
@@ -328,4 +328,5 @@ class QuadRuped {
         draw();
     }
 }
+
 
